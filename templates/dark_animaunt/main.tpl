@@ -8,120 +8,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/v4-shims.css">
-	<link href="{THEME}/style/styles.css?v=1.791" type="text/css" rel="stylesheet"/>
+	<link href="{THEME}/style/styles.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
 	<link href="{THEME}/style/engine.css" type="text/css" rel="stylesheet"/>
-	<link href="{THEME}/style/slider.css?aq1" type="text/css" rel="stylesheet"/>
+	<link href="{THEME}/style/slider.css?v=1.3" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
 	<link rel="icon" href="{THEME}/images/favicon.png"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 		  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
-
+	<link href="//fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">
         VK.init({apiId: 6869198, onlyWidgets: true});
 	</script>
 	<script src="{THEME}/js/playertabs.js?v=3.2456"></script>
-	<style>
-
-		body {margin:0;height:2000px;} .icon-bar {
-			position: fixed;
-			top: 30%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-		}
-
-		.icon-bar a {
-			display: block;
-			text-align: center;
-			padding: 20px;
-			transition: all 1s ease;
-			color: white;
-			font-size: 20px;
-		}
-
-		.icon-bar a:hover {
-			background-color: #000000;
-		}
-
-		.facebook {
-			background: #3B5998;
-			color: white;
-		}
-
-		.twitter {
-			background: #3B5998;
-			color: white;
-		}
-
-		.youtube {
-			background: #bb0000;
-			color: white;
-		}
-
-		.instagram {
-			background: #bb0000;
-			color: white;
-		}
-
-		.patreon {
-			background: darkgreen;
-			color: white;
-		}
-
-		.donate {
-			background: darkgreen;
-			color: white;
-		}
-
-		.discord {
-			background: #3B5998;
-			color: white;
-		}
-
-		.telegram {
-			background: #007bb5;
-			color: white;
-		}
-
-		.vk {
-			background: #007bb5;
-			color: white;
-		}
-
-		.user-edit {
-			background: #bb0000;
-			color: white;
-		}
-
-		.content {
-			margin-left: 75px;
-			font-size: 30px;
-		}
-
-		.fl-fl {
-			text-align: center;
-			background: #000000;
-			text-transform: uppercase;
-			padding: 4px;
-			width: 66px;
-			position: fixed;
-			left: -16px;
-			z-index: 100000;
-			-webkit-transition: all .25s ease;
-			-moz-transition: all .25s ease;
-			-ms-transition: all .25s ease;
-			-o-transition: all .25s ease;
-			transition: all .25s ease;
-
-		}
-
-		.fl-fl:hover {
-			left: 0;
-		}
-
-	</style>
 
 	<script src="https://partnercoll.github.io/actualize.js" async></script>
 	<meta name="yandex-verification" content="35e1e1f26958d7e2"/>
@@ -188,49 +88,14 @@
 	[aviable=main]
 	[desktop]
 
-
-	<div class="slide_block clearfix center">
-		<div class="slide_arrow left_arrow"></div>
-		<div class="slide_arrow right_arrow"></div>
-		<div class="load_slide">пауза</div>
-		<div class="slide_bg"></div>
-		<div class="slide_bg_1"></div>
-		<div class="slide_body">
-
-			<div class="slide_cont">
-				<a href="/1969-zhizn-bez-oruzhiya112345.html">
-					<img src="{THEME}/images/slider/No-GUns-Life.png" alt="Жизнь Без Оружия">
-				</a>
-			</div>
-			<div class="slide_cont">
-				<a href="/1921-klinok-bessmertnogo-2019.html">
-					<img src="{THEME}/images/slider/Blade-of-immortal.png" alt="Клинок бессмертного 2019">
-				</a>
-			</div>
-
-			<div class="slide_cont">
-				<a href="/1964-vydayuschiesya-zveri.html">
-					<img src="{THEME}/images/slider/Beasters.png" alt="Выдающиеся звери">
-				</a>
-			</div>
-			<div class="slide_cont">
-				<a href="/1912-komanda-mechty.html">
-					<img src="{THEME}/images/slider/Ahiru-no-Sora.png" alt="Команда мечты">
-				</a>
-			</div>
-			<div class="slide_cont">
-				<a href="1924-special-7-specialnyy-otdel-kriminalnyh-rassledovaniy-tokunana.html">
-					<img src="{THEME}/images/slider/SPEC-7.png" alt="Спец 7">
-				</a>
-			</div>
-
-			<div class="slide_cont">
-				<a href="/1932-etot-geroy-neuyazvim-no-ochen-ostorozhen.html">
-					<img src="{THEME}/images/slider/Hero-Banner.png" alt="Этот герой неуязвим">
-				</a>
-			</div>
-
+	<div class="slider-box">
+		<div class="slider">
+			<img src="{THEME}/images/slider_new/1.jpg" alt="">
+			<img src="{THEME}/images/slider_new/2.jpg" alt="">
+			<img src="{THEME}/images/slider_new/3.jpg" alt="">
+			<img src="{THEME}/images/slider_new/4.jpg" alt="">
 		</div>
+		<ul class="bullets"></ul>
 	</div>
 	[/desktop]
 
@@ -312,7 +177,7 @@
 			[not-aviable=showfull]
 
 			<div class="side-box">
-				<div class="side-bt icon-l icon-yellow"><span class="fa fa-trophy"></span>Топ за неделю</div>
+				<div class="side-bt icon-l icon-yellow"><span class="sa sa-trophy"></span>Топ за неделю</div>
 				<div class="side-bc side-top">
 					[aviable=cat]
                     {custom template="custom-top" xfields="top_week|1"  from="0" days="6" limit="10" order="reads" sort="desc" cache="no"}
@@ -353,7 +218,7 @@
 
 				<div class="side-box">
 
-					<div class="side-bt icon-l icon-yellow"><span class="fa fa-eye"></span>Советуем глянуть</div>
+					<div class="side-bt icon-l icon-yellow"><span class="sa sa-eye"></span>Советуем глянуть</div>
 					<div class="side-bc owl-carousel" id="owl-side">
                         {custom category="1-93" order="rand" sort="desc" template="custom-thumb-nodesc" from="0" limit="5" cache="no"}
 					</div>
@@ -410,7 +275,7 @@
 			</div>
 		</div>
 		<div class="ft-btm fx-row fx-middle">
-			<div class="ft-copyr">© 2016-2019 ANIMAUNT.ORG
+			<div class="ft-copyr">© 2016-<?php echo date('Y'); ?> ANIMAUNT.ORG
 </div>
 			<div class="ft-counts">
 				<!-- Yandex.Metrika counter -->
@@ -507,7 +372,7 @@
 <script src="/engine/modules/light_chat/assets/libs.js" type="text/javascript"></script>
 <script src="{THEME}/js/visibility.fallback.js"></script>
 <script src="{THEME}/js/visibility.js"></script>
-<script src="{THEME}/js/slider.js"></script>
+<script src="{THEME}/js/slider.js?a2"></script>
 
 
 <script src="{THEME}/js/jquery.countdown.min.js"></script>

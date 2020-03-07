@@ -1,7 +1,7 @@
 <div class="sect">
     <div class="sect-header fx-row fx-middle">
         <h2 class="sect-title icon-l icon-red">
-            <span class="fa fa-star"></span>
+            <span class="sa sa-anime"></span>
             Новые серии аниме
         </h2>
         <a href="/ongoing/" class="sect-link icon-r">
@@ -18,7 +18,7 @@
 
     <div class="sect-header fx-row fx-middle">
         <h2 class="sect-title icon-l icon-red">
-            <span class="fa fa-play-circle"></span>
+            <span class="sa sa-play-circle"></span>
             Все аниме
         </h2>
         <a href="/anime/" class="sect-link icon-r">
@@ -34,7 +34,7 @@
 <div class="sect">
     <div class="sect-header fx-row fx-middle">
         <h2 class="sect-title icon-l icon-red">
-            <i class="fa fa-youtube"></i>
+            <i class="sa sa-youtube"></i>
             Последнее с Youtube
         </h2>
         <a href="/youtube/" class="sect-link icon-r">
@@ -50,9 +50,9 @@
 <div class="sect">
     <div class="sect-header fx-row fx-middle">
         <h2 class="sect-title icon-l icon-red">
-            <span class="fa fa-newspaper-o"></span>
+            <span class="sa sa-newspaper-o"></span>
             Свежие статьи и новости <a href="/index.php?do=addnews" target="_blank"><span
-                        class="fa fa-pencil"></span></a></span>
+                        class="sa sa-pencil"></span></a></span>
         </h2>
         <a href="/novosti/" class="sect-link icon-r">
             Читать все

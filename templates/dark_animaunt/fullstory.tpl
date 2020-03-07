@@ -76,7 +76,7 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
             <li class="vis"><span>Страна:</span> [xfvalue_country]</li>
             [/xfgiven_country]
             [xfgiven_day_week]
-            <li class="vis" style="color:#ff505f"><span><b>День выхода:</span> [xfvalue_day_week]</b> </li>
+            <li class="vis" style="color:#e31522"><span><b>День выхода:</span> [xfvalue_day_week]</b> </li>
             [/xfgiven_day_week]
             [xfgiven_svyazi]
             <li class="vis"><span><b>Все сезоны и связанные аниме:</span> [xfvalue_svyazi]</li>

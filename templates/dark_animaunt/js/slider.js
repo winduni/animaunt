@@ -1,113 +1,111 @@
-$(function(){
-	var slideWidth = $('.slide_block').width(),
-		colSlide = $('.slide_cont').length-1,
-		numSlide = 0,
-		intervalS = 1000,
-		transitionS = 2,
-		autoSlide = true,
-		swipeC = 0,
-		intervalSLide = setInterval(function(){ rightSlide(); }, intervalS);
-	$('.slide_cont').width(slideWidth);
-	$('.slide_body').css('transition', 'all ease ' + transitionS + 's');
-	$('.slide_bg').css('transition', 'all ease ' + transitionS + 's');
-	$('.slide_bg_1').css('transition', 'all ease ' + transitionS + 's');
-	
-	$(window).resize(function(){
-		slideWidth = $('.slide_block').width();
-		$('.slide_cont').width(slideWidth);
-		slideAnim();
-	});
-	
-	function leftSlide(){
-		clearInterval(intervalSLide);
-		$('.slide_arrow.left_arrow').off();
-		$('.slide_arrow.right_arrow').off();
-		$('.slide_body').off('mousedown touchstart');
+/*
+http://coderpro.ru/jquery-prostoj-slajder-s-knopkami-upravleniya.html
+ */
+$(function() {
+    var slider = $('.slider'),
+        sliderContent = slider.html(),                      // Содержимое слайдера
+        slideWidth = $('.slider-box').outerWidth(),         // Ширина слайдера
+        slideCount = $('.slider img').length,               // Количество слайдов
+        prev = $('.slider-box .prev'),                      // Кнопка "назад"
+        next = $('.slider-box .next'),                      // Кнопка "вперед"
+        slideNum = 1,                                       // Номер текущего слайда
+        index =0,
+        clickBullets=0,
+        sliderInterval = 3300,                              // Интервал смены слайдов
+        animateTime = 1000,                                 // Время смены слайдов
+        course = 1,                                         // Направление движения слайдера (1 или -1)
+        margin = - slideWidth;                              // Первоначальное смещение слайдов
 
-		if(numSlide > 0){
-			numSlide--;
-		} else {
-			numSlide = colSlide;
-		}
-		
-		slideAnim();
+    for (var i=0; i<slideCount; i++)                      // Цикл добавляет буллеты в блок .bullets
+    {
+        html=$('.bullets').html() + '<li></li>';          // К текущему содержимому прибавляется один буллет
+        $('.bullets').html(html);                         // и добавляется в код
+    }
+    var  bullets = $('.slider-box .bullets li')          // Переменная хранит набор буллитов
 
-		setTimeout(function(){
-			$('.slide_arrow.left_arrow').on('click', leftSlide);
-			$('.slide_arrow.right_arrow').on('click', rightSlide);
-			$('.slide_body').on('mousedown touchstart', mouseEventStart);
-			if(autoSlide) intervalSLide = setInterval(function(){ rightSlide(); }, intervalS);
-		}, transitionS + '050');
-	}
-	
-	function rightSlide(){
-        if(!Visibility.hidden())
-        {
-            clearInterval(intervalSLide);
-            $('.slide_arrow.left_arrow').off();
-            $('.slide_arrow.right_arrow').off();
-            $('.slide_body').off('mousedown touchstart');
 
-            if(numSlide < colSlide){
-                numSlide++;
-            } else {
-                numSlide = 0;
-            }
+    $('.slider-box .bullets li:first').addClass('active');
+    $('.slider img:last').clone().prependTo('.slider');   // Копия последнего слайда помещается в начало.
+    $('.slider img').eq(1).clone().appendTo('.slider');   // Копия первого слайда помещается в конец.
+    $('.slider').css('margin-left', -slideWidth);         // Контейнер .slider сдвигается влево на ширину одного слайда.
 
-            slideAnim();
+    function nextSlide(){                                 // Запускается функция animation(), выполняющая смену слайдов.
+        interval = window.setInterval(animate, sliderInterval);
+    }
 
-            setTimeout(function(){
-                $('.slide_arrow.left_arrow').on('click', leftSlide);
-                $('.slide_arrow.right_arrow').on('click', rightSlide);
-                $('.slide_body').on('mousedown touchstart', mouseEventStart);
-                if(autoSlide) intervalSLide = setInterval(function(){ rightSlide(); }, intervalS);
-            }, transitionS + '050');
+    function animate(){
+        if (margin==-slideCount*slideWidth-slideWidth  && course==1){     // Если слайдер дошел до конца
+            slider.css({'marginLeft':-slideWidth});           // то блок .slider возвращается в начальное положение
+            margin=-slideWidth*2;
+        }else if(margin==0 && course==-1){                  // Если слайдер находится в начале и нажата кнопка "назад"
+            slider.css({'marginLeft':-slideWidth*slideCount});// то блок .slider перемещается в конечное положение
+            margin=-slideWidth*slideCount+slideWidth;
+        }else{                                              // Если условия выше не сработали,
+            margin = margin - slideWidth*(course);            // значение margin устанавливается для показа следующего слайда
         }
-	}
-	
-	function slideAnim(){
-		$('.slide_body').css('left', '-' + (slideWidth*numSlide) + 'px');
-		$('.slide_bg').css('left', '-' + (slideWidth/3*numSlide) + 'px');
-		$('.slide_bg_1').css('left', '-' + (slideWidth/4*numSlide) + 'px');
-	}
+        slider.animate({'marginLeft':margin},animateTime);  // Блок .slider смещается влево на 1 слайд.
 
-	function mouseEventStart(e){
-		var e = e || event;
-		swipeC = e.clientX;
-		$('.slide_body').on('mouseup', mouseEventEnd);
-	}
+        if (clickBullets==0){                               // Если слайдер сменился не через выбор буллета
+            bulletsActive();                                // Вызов функции, изменяющей активный буллет
+        }else{                                              // Если слайдер выбран с помощью буллета
+            slideNum=index+1;                               // Номер выбранного слайда
+        }
+    }
 
-	function mouseEventEnd(e){
-		var e = e || event;
-		if(swipeC - e.clientX > 20 || swipeC - e.clientX < -20){
-			$('.slide_cont a').on('click', function(){ return false; });
-			if(swipeC > e.clientX){
-				rightSlide();
-			} else {
-				leftSlide();
-			}
-		}
-		$('.slide_body').off('mouseup touchend');
-		$('.slide_cont a').off('click');
-	}
-	
-	$('.slide_arrow.left_arrow').on('click', leftSlide);
-	$('.slide_arrow.right_arrow').on('click', rightSlide);
-	$('.load_slide').on('click', function(){
-		autoSlide = autoSlide == true ? false : true;
-		$('.load_slide').toggleClass('pause');
-		if(autoSlide){
-			intervalSLide = setInterval(function(){ rightSlide(); }, intervalS);
-		} else {
-			clearInterval(intervalSLide);
-		}
-	});
-	
-	$('.slide_body').on('mousedown touchstart', mouseEventStart);
-	
-	
-	
-	$('.slide_body img').on('mousedown', function(){ return false; });
+    function bulletsActive(){
+        if (course==1 && slideNum!=slideCount){        // Если слайды скользят влево и текущий слайд не последний
+            slideNum++;                                     // Редактирунтся номер текущего слайда
+            $('.bullets .active').removeClass('active').next('li').addClass('active'); // Изменить активный буллет
+        }else if (course==1 && slideNum==slideCount){       // Если слайды скользят влево и текущий слайд последний
+            slideNum=1;                                     // Номер текущего слайда
+            $('.bullets li').removeClass('active').eq(0).addClass('active'); // Активным отмечается первый буллет
+            return false;
+        }else if (course==-1  && slideNum!=1){              // Если слайды скользят вправо и текущий слайд не последни
+            slideNum--;                                     // Редактирунтся номер текущего слайда
+            $('.bullets .active').removeClass('active').prev('li').addClass('active'); // Изменить активный буллет
+            return false;
+        }else if (course==-1  && slideNum==1){              // Если слайды скользят вправо и текущий слайд последни
+            slideNum=slideCount;                            // Номер текущего слайда
+            $('.bullets li').removeClass('active').eq(slideCount-1).addClass('active'); // Активным отмечается последний буллет
+        }
+    }
 
-	
+    function sliderStop(){                                // Функция преостанавливающая работу слайдера
+        window.clearInterval(interval);
+    }
+
+  /*  prev.click(function() {                               // Нажата кнопка "назад"
+        if (slider.is(':animated')) { return false; }       // Если не происходит анимация
+        var course2 = course;                               // Временная переменная для хранения значения course
+        course = -1;                                        // Устанавливается направление слайдера справа налево
+        animate();                                          // Вызов функции animate()
+        course = course2 ;                                  // Переменная course принимает первоначальное значение
+    });
+    next.click(function() {                               // Нажата кнопка "назад"
+        if (slider.is(':animated')) { return false; }       // Если не происходит анимация
+        var course2 = course;                               // Временная переменная для хранения значения course
+        course = 1;                                         // Устанавливается направление слайдера справа налево
+        animate();                                          // Вызов функции animate()
+        course = course2 ;                                  // Переменная course принимает первоначальное значение
+    });*/
+    bullets.click(function() {                            // Нажат один из буллетов
+        if (slider.is(':animated')) { return false; }       // Если не происходит анимация
+        sliderStop();                                       // Таймер на показ очередного слайда выключается
+        index = bullets.index(this);                        // Номер нажатого буллета
+        if (course==1){                                     // Если слайды скользят влево
+            margin=-slideWidth*index;                       // значение margin устанавливается для показа следующего слайда
+        }else if (course==-1){                              // Если слайды скользят вправо
+            margin=-slideWidth*index-2*slideWidth;
+        }
+        $('.bullets li').removeClass('active').eq(index).addClass('active');  // Выбранному буллету добавляется сласс .active
+        clickBullets=1;                                     // Флаг информирующий о том, что слайд выбран именно буллетом
+        animate();
+        clickBullets=0;
+    });
+
+    slider.add(next).add(prev).hover(function() {         // Если курсор мыши в пределах слайдера
+        sliderStop();                                       // Вызывается функция sliderStop() для приостановки работы слайдера
+    }, nextSlide);                                        // Когда курсор уходит со слайдера, анимация возобновляется.
+
+    nextSlide();                                          // Вызов функции nextSlide()
 });

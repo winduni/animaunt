@@ -11,7 +11,7 @@
 .filt-check label {display:block; cursor: pointer; height: 20px; line-height: 20px;}
 .filt-check label:before {content: ""; width: 20px; height: 20px; border-radius: 50%; display: inline-block; 
 	vertical-align: top; margin-right: 7px; background-color: #fff; box-shadow: 0 5px 25px 0 rgba(0,0,0,0.05);}
-.filt-check input[type="checkbox"]:checked + label:before {background-color:#ff505f;}
+.filt-check input[type="checkbox"]:checked + label:before {background-color:#e31522;}
 .filt-submit {width: 100%;}
 .filt-submit input[type="button"] {display:inline-block; text-align:center; margin-right: 7px; border-radius: 0;}
 
