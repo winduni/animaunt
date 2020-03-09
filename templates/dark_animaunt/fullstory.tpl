@@ -76,7 +76,7 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
             <li class="vis"><span>Страна:</span> [xfvalue_country]</li>
             [/xfgiven_country]
             [xfgiven_day_week]
-            <li class="vis" style="color:#e31522"><span><b>День выхода:</span> [xfvalue_day_week]</b> </li>
+            <li class="vis" style="color:#e31522;font-family: 'Roboto';"><span><b>День выхода:</span> [xfvalue_day_week]</b> </li>
             [/xfgiven_day_week]
             [xfgiven_svyazi]
             <li class="vis"><span><b>Все сезоны и связанные аниме:</span> [xfvalue_svyazi]</li>
@@ -88,13 +88,13 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
 
     <br>
     [if full_story>0 || short_story>0]
-    <div class="sub-title icon-l icon-yellow"><span class="fa fa-file-text-o"></span>Описание аниме «{title}»</div>
+    <div class="sub-title icon-l icon-yellow"><span class="sa sa-file-text-o"></span>Описание аниме «{title}»</div>
     <div class="fdesc full-text clearfix slice-this" id="fdesc">{full-story}</div>
     [/if]
 
     [desktop]
     [xfgiven_screen]
-    <div class="sub-title icon-l icon-yellow"><span class="fa fa-picture-o"></span>Кадры из аниме «{title}»</div>
+    <div class="sub-title icon-l icon-yellow"><span class="sa sa-picture-o"></span>Кадры из аниме «{title}»</div>
 
     <div class="screens fx-row">
         [xfvalue_screen]
@@ -113,8 +113,8 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
     [/xfgiven_svyazi]
 
     [xfgiven_player_dop]
-    <div class="fbtn to-trailer" title="Смотреть {title} в альтернативном плеере" data-src="[xfvalue_player_dop]"><h2><i
-                    class="fa fa-film"></i> Смотреть в другом Плеере </h2></div>
+    <!--div class="fbtn to-trailer" title="Смотреть {title} в альтернативном плеере" data-src="[xfvalue_player_dop]"><h2><i
+                    class="fa fa-film"></i> Смотреть в другом Плеере </h2></div-->
     [/xfgiven_player_dop]
     [xfgiven_player_vk]<a href="[xfvalue_player_vk]" target="_blank">
         <div class="fbtn" title="Смотреть {title} в vk"><h3><i class="fa fa-vk"></i> Смотреть в ВК</h3>
@@ -149,7 +149,7 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
             <video id="player"></video>
         </div>
     </div-->[/news][/country]
-    <div class="player-tabs-list" style="background-color: #fff;position: relative;">
+    <div class="player-tabs-list">
         <!-- <a href="#main-player" class="tab-player-link active">Наш плеер</a> -->
         {fplayers_tablinks}
         [group=5]<div class="k-fav button icon-l need-reg" title="Добавить в закладки"><span class="fa fa-heart-o"></span>В закладки</div>
@@ -215,11 +215,11 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
         </div>
         <div>
             <a href="https://tele.gg/Animaunttv" target="_blank" title="Скачать и смотреть {title} в Telegram с 2020 года">
-                <i class="fa fa-telegram" style="font-size: 25px;color: #ff505f;"></i>
+                <i class="fa fa-telegram" style="font-size: 25px;color: #e31522;"></i>
             </a>
 
             <a href="https://tele.gg/Animaunt_relis" target="_blank" title="Скачать и смотреть {title} в Telegram архив до 2020 года">
-                <i class="fa fa-telegram" style="font-size: 25px;color: #00adef;"></i>
+                <i class="fa fa-telegram" style="font-size: 25px;color: #e31522;"></i>
             </a>
         </div>
     </div>
@@ -253,24 +253,26 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
 
     <script type='text/javascript' src='https://yt.advmaker.su/js/overroll.js?a=2'></script>
     {banner_pleer_before}
+
+    <div class="sub-title icon-l icon-yellow"><span class="sa sa-picture-o1"></span>Смотрите
+        также</div>
+
     <div class="sect">
-        <div class="sect-header fx-row fx-middle">
-            <h3 class="sect-title icon-l icon-red" style="font-size: 18px;"><span class="fa fa-link"></span>Смотрите
-                также</h3>
-        </div>
         <div class="sect-slide-items owl-carousel clearfix">
             {related-news}
         </div>
     </div>
+
+
 <div class="read-releases">
     {release}
 </div>
 
+
+    <div class="sub-title icon-l icon-yellow"><span class="sa sa-picture-o2"></span>Комментарии ({comments-num})</div>
+
     <div class="full-comms ignore-select" id="full-comms">
-        <div class="sect-header fx-row fx-middle">
-            <h4 class="sect-title icon-l icon-red" style="font-size: 18px;"><span class="fa fa-comments"></span>Комментарии
-                ({comments-num})</h4>
-        </div>
+
         {addcomments}
         {comments}
 

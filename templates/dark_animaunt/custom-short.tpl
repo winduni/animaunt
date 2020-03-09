@@ -5,7 +5,7 @@
 			<div class="th-mask fx-col fx-center fx-middle">
 				<div class="view_main_rod">
 				<div class="view_main"><span>{views}</span><br>просмотров</div>
-				<div style="width: 94%;margin: 11px auto 0;color:#fff;">
+				<div class="main_com_post">
 					<div style="display: block;width: 55px;float: left;color: #fff;">{comments-num} <i class="fa fa-commenting" aria-hidden="true" style="
     color: #fff;
 "></i></div>
