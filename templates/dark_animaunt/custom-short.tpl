@@ -12,7 +12,17 @@
 					<div style="display: block;width: 55px;float: left;color: #fff;">{rating} <i class="fa fa-heart" aria-hidden="true" style="
     color: #fff;
 "></i></div>
+
 				</div>
+					<? $timer = '[xfvalue_date_timer]';
+$str = preg_replace("/[^0-9]/", ',', $timer);
+?>
+
+					<? if (!empty($str)){ ?>
+					<div class="y-timer">
+						<p data-timer="<?=$str;?>,0"></p>
+					</div>
+					<? } ?>
 			</div>
 			</div>
 			<!--div class="th-qual">[xfvalue_age_limit]+</div-->
