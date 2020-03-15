@@ -86,4 +86,6 @@
                 <li><a href="/anonsy/" [category=118]class="is-active"[/category]>Анонсы</a></li>
 				<li><a href="/doramy/" [category=97]class="is-active"[/category]>Дорамы</a></li>
 				<li><a href="/brief-stories/">Мультфильмы</a></li>
+				<li><a href="/calendar.html">Ближайшие серии</a></li>
+
 			</ul>

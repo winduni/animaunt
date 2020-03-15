@@ -89,10 +89,10 @@
 
     <div class="slider-box">
         <div class="slider">
-           <img src="{THEME}/images/slider_new/1.jpg" alt="">
-            <img src="{THEME}/images/slider_new/2.jpg" alt="">
-           <img src="{THEME}/images/slider_new/3.jpg" alt="">
-           <img src="{THEME}/images/slider_new/4.jpg" alt="">
+            <a href="/245-boruto-novye-pokoleniya-1.html"> <img src="{THEME}/images/slider_new/1.jpg" alt=""></a>
+            <a href="/1939-pridi-zhe-v-mir-demonov-iruma.html"> <img src="{THEME}/images/slider_new/2.jpg" alt=""></a>
+            <a href="/2023-dorohedoro.html"> <img src="{THEME}/images/slider_new/3.jpg" alt=""></a>
+            <a href="/1827-chernii-clever.html"> <img src="{THEME}/images/slider_new/4.jpg" alt=""></a>
         </div>
         <ul class="bullets"></ul>
     </div>
@@ -179,10 +179,10 @@
                 <div class="side-bt icon-l icon-yellow"><span class="sa sa-trophy"></span>Топ за неделю</div>
                 <div class="side-bc side-top">
                     [aviable=cat]
-                    {custom template="custom-top" xfields="top_week|1"  from="0" days="6" limit="10" order="reads" sort="desc" cache="no"}
+                    {custom template="custom-top" xfields="top_week|1"  from="0" days="100" limit="10" order="reads" sort="desc" cache="no"}
                     [/aviable]
                     [not-aviable=cat]
-                    {custom template="custom-top" xfields="top_week|1"  from="0" days="6" limit="10" order="reads" sort="desc" cache="no"}
+                    {custom template="custom-top" xfields="top_week|1"  from="0" days="100" limit="10" order="reads" sort="desc" cache="no"}
                     [/not-aviable]
                 </div>
             </div>
@@ -218,7 +218,7 @@
 
                     <div class="side-bt icon-l icon-yellow"><span class="sa sa-eye"></span>Советуем глянуть</div>
                     <div class="side-bc owl-carousel" id="owl-side">
-                        {custom category="1-93" order="rand" sort="desc" template="custom-thumb-nodesc" from="0" limit="5" cache="no"}
+                        {custom category="1-93" order="rand" sort="desc" days="100" template="custom-thumb-nodesc" from="0" limit="5" cache="no"}
                     </div>
                 </div>
 
@@ -229,12 +229,14 @@
                 [/desktop]
                 <div class="side-box">
                     <div class="side-bc">
-                        <img src="{THEME}/images/week/zjbWerKupjY.jpg" style="max-width:100%;">
+                        <a href="/calendar.html"> <img src="{THEME}/images/week/tyan-ponedelnik.gif"
+                                                       style="max-width:100%;"></a>
                     </div>
                 </div>
                 <div class="side-box">
                     <div class="side-bc">
-                        <img src="{THEME}/images/week/sAzcz1a6uxI.jpg" style="max-width:100%;">
+                        <a href="/novosti/"> <img src="{THEME}/images/week/goroskop-tyankiTYaNKI3.gif"
+                                                  style="max-width:100%;"></a>
                     </div>
                 </div>
 
@@ -255,7 +257,9 @@
         <!-- END SIDE -->
 
     </div>
-
+    [not-aviable=showfull]
+    <img src="{THEME}/images/week/gifka-bez-fona.gif" class="poprygushkin" id="poprygushkin" style="display: none !important;">
+    [/not-aviable]
     <footer class="footer center fx-row">
         <div class="ft-desc">
             <h2><b>По вопросам рекламы:</b></h2>
@@ -407,6 +411,28 @@
 
 [/desktop]
 
+<script>
+
+    $(function() {
+        setTimeout(function() {
+            document.getElementById("poprygushkin").style.display = 'block';
+        }, 10000);
+    });
+
+
+
+
+  $('#poprygushkin').on('mousewheel', function(e) {
+        document.getElementById("poprygushkin").style.display = 'none';
+      setTimeout(function() {
+          document.getElementById("poprygushkin").style.display = 'block';
+      }, 5000);
+    });
+
+
+
+
+</script>
 
 </body>
 </html>
