@@ -235,12 +235,12 @@
                 </div>
                 <div class="side-box">
                     <div class="side-bc">
-                        <a href="/novosti/"> <img src="{THEME}/images/week/goroskop-tyankiTYaNKI3.gif"
+                        <a href="/novosti/"> <img src="{THEME}/images/week/goroskop-tyankiTYaNKI3-1.gif"
                                                   style="max-width:100%;"></a>
                     </div>
                 </div>
 
-                <br><br>
+                <br><br> 
 
                 [group=1,2]
                 <div class="side-box">
@@ -258,7 +258,7 @@
 
     </div>
     [not-aviable=showfull]
-    <img src="{THEME}/images/week/gifka-bez-fona.gif" class="poprygushkin" id="poprygushkin" style="display: none !important;">
+    <!--img src="{THEME}/images/week/gifka-bez-fona.gif" class="poprygushkin" id="poprygushkin"-->
     [/not-aviable]
     <footer class="footer center fx-row">
         <div class="ft-desc">

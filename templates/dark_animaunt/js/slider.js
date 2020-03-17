@@ -1,6 +1,3 @@
-/*
-http://coderpro.ru/jquery-prostoj-slajder-s-knopkami-upravleniya.html
- */
 $(function() {
     var slider = $('.slider'),
         sliderContent = slider.html(),                      // Содержимое слайдера
@@ -11,7 +8,7 @@ $(function() {
         slideNum = 1,                                       // Номер текущего слайда
         index =0,
         clickBullets=0,
-        sliderInterval = 330000,                              // Интервал смены слайдов
+        sliderInterval = 10000,                              // Интервал смены слайдов
         animateTime = 1000,                                 // Время смены слайдов
         course = 1,                                         // Направление движения слайдера (1 или -1)
         margin = - slideWidth;                              // Первоначальное смещение слайдов
@@ -74,7 +71,7 @@ $(function() {
         window.clearInterval(interval);
     }
 
-  /*  prev.click(function() {                               // Нажата кнопка "назад"
+    prev.click(function() {                               // Нажата кнопка "назад"
         if (slider.is(':animated')) { return false; }       // Если не происходит анимация
         var course2 = course;                               // Временная переменная для хранения значения course
         course = -1;                                        // Устанавливается направление слайдера справа налево
@@ -87,7 +84,7 @@ $(function() {
         course = 1;                                         // Устанавливается направление слайдера справа налево
         animate();                                          // Вызов функции animate()
         course = course2 ;                                  // Переменная course принимает первоначальное значение
-    });*/
+    });
     bullets.click(function() {                            // Нажат один из буллетов
         if (slider.is(':animated')) { return false; }       // Если не происходит анимация
         sliderStop();                                       // Таймер на показ очередного слайда выключается
