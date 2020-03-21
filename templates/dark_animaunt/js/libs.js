@@ -187,7 +187,17 @@ $(document).ready(function(){
 		autoplay:true,
 		autoplayTimeout:12000
 	 });
-	
+    $("#owl-side-main").owlCarousel({
+        items:1,
+        loop:false,
+        rewind:true,
+        nav:false,
+        navText:['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
+        slideBy:1,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:9000
+    });
 	if ($(window).width() > 1220) {
 		$('.h-menu li:has(.hidden-menu)').hover(function() {
 			$(this).find('.hidden-menu').fadeToggle(200);

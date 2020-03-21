@@ -4082,3 +4082,11 @@ article .full-text {
     position: fixed;
     z-index: 99999999999;display:none;
 }
+#owl-side-main .owl-dot{
+    height: 20px;
+    width:20px;
+}
+#owl-side-main .owl-dots {
+    left: 130px;
+    bottom:80px;
+}

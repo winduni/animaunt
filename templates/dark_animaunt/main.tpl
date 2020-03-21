@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/v4-shims.css">
     <link href="{THEME}/style/styles.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
     <link href="{THEME}/style/engine.css" type="text/css" rel="stylesheet"/>
-    <link href="{THEME}/style/slider.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
+
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
     <link rel="icon" href="{THEME}/images/favicon.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -87,15 +87,30 @@
     [aviable=main]
     [desktop]
 
-    <div class="slider-box">
-        <div class="slider">
-            <a href="/245-boruto-novye-pokoleniya-1.html"> <img src="{THEME}/images/slider_new/1.jpg" alt=""></a>
-            <a href="/1939-pridi-zhe-v-mir-demonov-iruma.html"> <img src="{THEME}/images/slider_new/2.jpg" alt=""></a>
-            <a href="/2023-dorohedoro.html"> <img src="{THEME}/images/slider_new/3.jpg" alt=""></a>
-            <a href="/1827-chernii-clever.html"> <img src="{THEME}/images/slider_new/4.jpg" alt=""></a>
+
+    <div class="side-bc owl-carousel" id="owl-side-main">
+        <div class="thumb-item">
+            <a class="thumb-img" href="/245-boruto-novye-pokoleniya-1.html">
+                <img src="{THEME}/images/slider_new/1.jpg" alt="">
+            </a>
         </div>
-        <ul class="bullets"></ul>
+        <div class="thumb-item">
+            <a class="thumb-img"  href="/1939-pridi-zhe-v-mir-demonov-iruma.html">
+                <img src="{THEME}/images/slider_new/2.jpg" alt="">
+            </a>
+        </div>
+        <div class="thumb-item">
+            <a class="thumb-img"  href="/2023-dorohedoro.html">
+                <img src="{THEME}/images/slider_new/3.jpg" alt="">
+            </a>
+        </div>
+        <div class="thumb-item">
+            <a class="thumb-img" href="/1827-chernii-clever.html">
+                <img src="{THEME}/images/slider_new/4.jpg" alt="">
+            </a>
+        </div>
     </div>
+
     [/desktop]
 
     [/aviable]
@@ -384,7 +399,7 @@
 <script src="/engine/modules/light_chat/assets/libs.js" type="text/javascript"></script>
 <script src="{THEME}/js/visibility.fallback.js"></script>
 <script src="{THEME}/js/visibility.js"></script>
-<script src="{THEME}/js/slider.js?v=<?php echo time() ?>"></script>
+
 
 
 <script src="{THEME}/js/jquery.countdown.min.js"></script>
@@ -429,7 +444,16 @@
       }, 5000);
     });
 
-
+    $(function() {
+        // Owl Carousel
+        var owl = $(".owl-carousel-2");
+        owl.owlCarousel({
+            items: 1,
+            margin: 10,
+            loop: true,
+            nav: false
+        });
+    });
 
 
 </script>
