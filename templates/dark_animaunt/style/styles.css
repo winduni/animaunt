@@ -4069,6 +4069,10 @@ article .full-text {
 .vis a:hover, .vis span.ui-link:hover{
     background: #69627c;
 }
+.vis a{
+    display: inline-block;
+    margin-bottom: 3px;
+}
 .main .berrors {
     background: #5637a0;
     border-radius: 10px;
