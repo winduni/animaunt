@@ -1,5 +1,5 @@
 			<ul class="h-menu">
-				<li><a href="/anime/" [aviable=main]class="is-active"[/aviable][category=1-93]class="is-active"[/category]>Аниме</a>
+				<li class="menu-fix-width  "><a href="/anime/"  class="btn-menu-1[category=1-93] is-active[/category]">Аниме</a>
 					<div class="hidden-menu">
 						<div class="hidden-cols fx-row">
 							<div class="hidden-col hidden-sect">
@@ -82,10 +82,10 @@
 						</div>
 					</div>
 				</li>
-                <li><a href="/ongoing/" [aviable=ongoing]class="is-active"[/aviable]>Онгоинги</a></li>
-                <li><a href="/anonsy/" [category=118]class="is-active"[/category]>Анонсы</a></li>
-				<li><a href="/doramy/" [category=97]class="is-active"[/category]>Дорамы</a></li>
-				<li><a href="/brief-stories/">Мультфильмы</a></li>
-				<li><a href="/calendar.html">Ближайшие серии</a></li>
+				<li class="menu-fix-width"><a href="/ongoing/" class="btn-menu-1[aviable=ongoing] is-active[/aviable]">Онгоинги</a></li>
+				<li class="menu-fix-width"><a href="/anonsy/" class="btn-menu-1[category=118] is-active[/category]">Анонсы</a></li>
+				<li class="menu-fix-width"><a href="/doramy/"  class="btn-menu-1[category=97] is-active[/category]">Дорамы</a></li>
+				<li><a href="/brief-stories/" class="btn-menu-1 <?php if(stripos($_SERVER['REQUEST_URI'], 'brief-stories')) {echo 'is-active';} ?>">Мультфильмы</a></li>
+				<li><a href="/calendar.html" class="btn-menu-1 <?php if(stripos($_SERVER['REQUEST_URI'], 'calendar')) {echo 'is-active';} ?>">Ближайшие серии</a></li>
 
 			</ul>

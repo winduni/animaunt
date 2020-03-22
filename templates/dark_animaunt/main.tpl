@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/v4-shims.css">
     <link href="{THEME}/style/styles.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
-    <link href="{THEME}/style/engine.css" type="text/css" rel="stylesheet"/>
+    <link href="{THEME}/style/menu.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
+    <link href="{THEME}/style/engine.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
 
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
     <link rel="icon" href="{THEME}/images/favicon.png"/>
@@ -188,20 +189,20 @@
             <br>
 
 
-            [not-aviable=showfull]
+            [aviable=main]
 
             <div class="side-box">
                 <div class="side-bt icon-l icon-yellow"><span class="sa sa-trophy"></span>Топ за неделю</div>
                 <div class="side-bc side-top">
                     [aviable=cat]
-                    {custom template="custom-top" xfields="top_week|1"  from="0" days="100" limit="10" order="reads" sort="desc" cache="no"}
+                    {custom template="custom-top" xfields="top_week|1"  from="0" days="100" limit="6" order="reads" sort="desc" cache="no"}
                     [/aviable]
                     [not-aviable=cat]
-                    {custom template="custom-top" xfields="top_week|1"  from="0" days="100" limit="10" order="reads" sort="desc" cache="no"}
+                    {custom template="custom-top" xfields="top_week|1"  from="0" days="100" limit="6" order="reads" sort="desc" cache="no"}
                     [/not-aviable]
                 </div>
             </div>
-            [/not-aviable]
+            [/aviable]
 
             <br>
 
@@ -223,7 +224,7 @@
                     [/not-aviable]
                     <div class="widget-btn-container" data-lang="ru" title="Telegram @animaunttv"
                          onclick="location.href = 'https://tele.gg/animaunttv';">
-                        Telegram канал @animaunttv
+                        <span> Telegram канал @animaunttv</span>
                     </div>
                     <!--https://tgwidget.com/-->
                 </div>
@@ -283,6 +284,7 @@
         <ul class="ft-menu">
 
             <li><b><a href="http://www.donationalerts.ru/r/mihaelkehl" title="" rel="nofollow">Помочь проекту<br>
+                        <div align="center"><img src="{THEME}/images/help.png" alt=""></div>
                     </a></b></li>
 
         </ul>
@@ -454,7 +456,22 @@
             nav: false
         });
     });
+    $('.btn-red').mouseover(function(){
+        $(this).parent().parent().parent().addClass("action")
+    });
+    $('.btn-red').mouseout(function(){
+        $(this).parent().parent().parent().removeClass("action")
+    });
 
+    document.querySelector('.widget-btn-container').onmousemove = (e) => {
+
+        const x = e.pageX - e.target.offsetLeft;
+        const y = e.pageY - e.target.offsetTop;
+
+        e.target.style.setProperty('--x', '${ x }px');
+        e.target.style.setProperty('--y', '${ y }px');
+
+    }
 
 </script>
 

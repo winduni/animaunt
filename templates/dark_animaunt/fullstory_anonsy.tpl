@@ -15,8 +15,7 @@
             </div>
             [xfgiven_trailer]<div class="fbtn to-trailer" title="Трейлер {title}" data-src="[xfvalue_trailer]"><i class="fa fa-youtube"></i> Смотреть трейлер</div>[/xfgiven_trailer]
             [xfgiven_torrent]<a href="[xfvalue_torrent] cerf" target="_blank"><div class="fbtn" title="Скачать {title} через torrent"><h2><i class="fa fa-cloud-download-alt"></i>  Скачать torrent</h2></a></div>[/xfgiven_torrent]
-            <iframe frameborder="0" src="https://pushall.ru/widget.php?subid=5191" width="320" height="120" scrolling="no" style="overflow: hidden;">
-</iframe>
+
         </div>
         <div class="fright">
             
@@ -44,10 +43,11 @@
 
     <!-- END FCOLS -->
 <br>
-    [if full_story>0 || short_story>0]
-    <div class="sub-title icon-l icon-yellow"><span class="fa fa-file-text-o"></span>Описание аниме «{title}»</div>
-    <div class="fdesc full-text clearfix slice-this" id="fdesc">{full-story}</div>
-    [/if]
+        <br>
+        [if full_story>0 || short_story>0]
+        <div class="sub-title icon-l icon-yellow"><span class="sa sa-file-text-o"></span>Описание аниме «{title}»</div>
+        <div class="fdesc full-text clearfix slice-this" id="fdesc">{full-story}</div>
+        [/if]
 	[desktop]
         
     [xfgiven_screen]
@@ -64,28 +64,22 @@
     
 
 <script type='text/javascript' src='https://yt.advmaker.su/js/overroll.js?a=2'></script>
-	   
 
 
-  <div class="sect">
-        <div class="sect-header fx-row fx-middle">
-            [xfgiven_svyazi]<div class="fbtn" title="Все сезоны и связанные аниме"><h2><i class="fa fa-smile"></i> Все сезоны аниме по ссылке: <b>[xfvalue_svyazi]</b> </h2></div>[/xfgiven_svyazi]
-            <h3 class="sect-title icon-l icon-red" style="font-size: 18px;"><span class="fa fa-link"></span>Смотрите также</h3>
-        </div>
-        <div class="sect-slide-items owl-carousel clearfix">
-            {related-news}	
-        </div>
-    </div>
+
+        <div style="margin-bottom: 20px;" class="sub-title icon-l icon-yellow"><span class="sa sa-picture-o1"></span>Смотрите
+            также</div>
 
     {release}
+        <div class="sub-title icon-l icon-yellow"><span class="sa sa-picture-o2"></span>Комментарии ({comments-num})</div>
 
-    <div class="full-comms ignore-select" id="full-comms">
-        <div class="sect-header fx-row fx-middle">
-            <h4 class="sect-title icon-l icon-red" style="font-size: 18px;"><span class="fa fa-comments"></span>Комментарии ({comments-num})</h4>
+        <div class="full-comms ignore-select" id="full-comms">
+
+            {addcomments}
+            {comments}
+
+            {navigation}
         </div>
-        {addcomments}
-        {comments}
-        {navigation}
-    </div>
+
 
 </article>
