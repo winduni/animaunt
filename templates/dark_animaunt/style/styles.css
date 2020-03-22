@@ -4217,3 +4217,15 @@ span.ui-link{
 .ya-share2__container_size_m .ya-share2__icon{
     padding: 19px;
 }
+#dlepopup-news-edit .xfieldscolleft, #dropmenudiv a{
+    color: #000;
+}
+.ui-dialog{
+    color: #000 !important;
+}
+.ui-button{
+    background: #e31522;
+}
+.lb-check label, .lb-name{
+    color: #fff;
+}
