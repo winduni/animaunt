@@ -1,6 +1,5 @@
 			<ul class="h-menu">
-				<li class="menu-fix-width  "><a href="/anime/"  class="btn-menu-1[category=1-93] is-active[/category]">Аниме</a>
-					<div class="hidden-menu">
+				<li class="menu-fix-width "><a href="/anime/" class="btn-menu-1[category=1-93] is-active[/category]">Аниме</a><div class="hidden-menu">
 						<div class="hidden-cols fx-row">
 							<div class="hidden-col hidden-sect">
 								<div class="hidden-sect-title">По типу</div>
@@ -87,5 +86,4 @@
 				<li class="menu-fix-width"><a href="/doramy/"  class="btn-menu-1[category=97] is-active[/category]">Дорамы</a></li>
 				<li><a href="/brief-stories/" class="btn-menu-1 <?php if(stripos($_SERVER['REQUEST_URI'], 'brief-stories')) {echo 'is-active';} ?>">Мультфильмы</a></li>
 				<li><a href="/calendar.html" class="btn-menu-1 <?php if(stripos($_SERVER['REQUEST_URI'], 'calendar')) {echo 'is-active';} ?>">Ближайшие серии</a></li>
-
 			</ul>

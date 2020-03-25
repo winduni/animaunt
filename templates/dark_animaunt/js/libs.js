@@ -197,16 +197,16 @@ $(document).ready(function(){
         autoplay:true,
         autoplayTimeout:9000
     });
-	if ($(window).width() > 1220) {
+	/*if ($(window).width() > 1220) {
 		$('.h-menu li:has(.hidden-menu)').hover(function() {
 			$(this).find('.hidden-menu').fadeToggle(200);
 			$(this).toggleClass('menuactive');
 		});	
-	}; 
+	}; */
 		
 	$('.h-menu li:has(.hidden-menu)').addClass('submenu');
 	
-	if ($(window).width() > 1220) {	
+	if ($(window).width() > 1220) {
         var timerId;
 		$('body').on({
 			mouseenter: function () {

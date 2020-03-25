@@ -4229,3 +4229,7 @@ span.ui-link{
 .lb-check label, .lb-name{
     color: #fff;
 }
+.submenu:hover .hidden-menu{
+    display: block;
+}
+

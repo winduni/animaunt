@@ -170,7 +170,6 @@
                     </h2>
                 </div>
                 <div class="sect-items sect-items-main clearfix">
-
                     <div id="dle-content">{content}</div>
                 </div>
             </div>
