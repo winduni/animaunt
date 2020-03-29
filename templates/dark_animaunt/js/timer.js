@@ -1,51 +1,49 @@
-﻿		/*
-		https://dle-faq.ru/blog/4872-countdown.html
-		 */
+﻿/*
+https://dle-faq.ru/blog/4872-countdown.html
+ */﻿
+jQuery(document).ready(function($) {
 
-        jQuery(document).ready(function($) {
+			// для всех элеметов, которые имеют атрибут data-timer, выполняем следующее действие
+			$("[data-timer]").each(function () {
 
-            // для всех элементов, которые имеют атрибут data-timer, выполняем следующее действие
-            $("[data-timer]").each(function () {
+				// текущий элемент, обернутый в jquery
+				var $this = $(this);
+				
+				// Получаем описание таймера
+				var timerDescription = $this.prop('title');
+				// Если у элемента есть title - прибавляем к нему двоеточие и пробел
+				if (timerDescription != false) {
+					timerDescription = timerDescription+': ';
+				};
 
-                // текущий элемент, обернутый в jquery
-                var $this = $(this);
+				// получили строку, разбили ее по ","
+				var dateArr = $this.data("timer").split(",");
 
-                // Получаем описание таймера
-                var timerDescription = $this.prop('title');
-                // Если у элемента есть title - прибавляем к нему двоеточие и пробел
-                if (timerDescription != false) {
-                    timerDescription = timerDescription+': ';
-                };
+				// элементы массива - строки, а для new Date нужны числа
+				dateArr = $.map(dateArr, function (elem) {
+					return parseInt(elem);
+				});
 
-                // получили строку, разбили ее по ","
-                var dateArr = $this.data("timer").split(",");
-
-                // элементы массива - строки, а для new Date нужны числа
-                dateArr = $.map(dateArr, function (elem) {
-                    return parseInt(elem);
-                });
-
-                // в html пишем "человеческие" месяцы, здесь преобразуем к js-месяцам
-                dateArr[1]--;
+				// в html пишем "человеческие" месяцы, здесь преобразуем к js-месяцам
+				dateArr[1]--;
 
 
-                // конструируем даты
-                var date = new Date(dateArr[0], dateArr[1], dateArr[2], dateArr[3], dateArr[4], dateArr[5]);
+				// конструируем даты
+				var date = new Date(dateArr[0], dateArr[1], dateArr[2], dateArr[3], dateArr[4], dateArr[5]);
 
-                // инициализируем таймер
-                $this.countdown({
-                    // Берём дату из заранее заготовленной
-                    until: date,
+				// инициализируем таймер
+				$this.countdown({
+					// Берё дату из заранее заготовленной
+					until: date,
 
-                    // Определяем шаблон вывода
-                    layout:'{desc}<span>{d<}{dn} {dl} и {d>}'+
-                    '{hn} {hl}, {mn} {ml}, {sn} {sl}</span>',
+					// Определяем шаблон вывода
+					layout:'{desc}<span>{d<}{dn}{dl}{d>}'+
+					'{hn}{hl}{mn}{ml}{sn}{sl}</span>',
+					// Определяем описание
+					description: timerDescription 
 
-                    // Определяем описание
-                    description: timerDescription
+					// Ну и про язык не забываем
+				}, $.countdown.regional['ru']);
 
-                    // Ну и про язык не забываем
-                }, $.countdown.regional['ru']);
-
-            });
-        });
+			});
+		});
