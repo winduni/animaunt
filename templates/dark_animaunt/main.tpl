@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/v4-shims.css">
-    <link href="{THEME}/style/styles.css?v=1" type="text/css" rel="stylesheet"/>
+    <link href="{THEME}/style/styles.css?v=3" type="text/css" rel="stylesheet"/>
     <link href="{THEME}/style/menu.css?v=1" type="text/css" rel="stylesheet"/>
     <link href="{THEME}/style/engine.css?v=1" type="text/css" rel="stylesheet"/>
     <link href="{THEME}/style/btn-pleer.css?v=1" type="text/css" rel="stylesheet"/>
@@ -180,6 +180,93 @@
                 </div>
             </div>
             [/aviable]
+
+
+
+            <?php if(stripos($_SERVER['REQUEST_URI'], 'calendar')):?>
+
+            <div class="sect sect-calendar">
+                <div class="sect-header fx-row fx-middle">
+                    <h2 class="sect-title icon-l icon-red">
+                        Понедельник
+                    </h2>
+                </div>
+                <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+                    {custom  xfields="day_week|Понедельник"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+                </div>
+            </div>
+
+            <div class="sect sect-calendar">
+                <div class="sect-header fx-row fx-middle">
+                    <h2 class="sect-title icon-l icon-red">
+                        Вторник
+                    </h2>
+                </div>
+                <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+                    {custom  xfields="day_week|Вторник"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+                </div>
+            </div>
+
+            <div class="sect sect-calendar">
+                <div class="sect-header fx-row fx-middle">
+                    <h2 class="sect-title icon-l icon-red">
+                        Среда
+                    </h2>
+                </div>
+                <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+                    {custom  xfields="day_week|Среда"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+                </div>
+            </div>
+
+            <div class="sect sect-calendar">
+                <div class="sect-header fx-row fx-middle">
+                    <h2 class="sect-title icon-l icon-red">
+                        Четверг
+                    </h2>
+                </div>
+                <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+                    {custom  xfields="day_week|Четверг"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+                </div>
+            </div>
+
+            <div class="sect sect-calendar">
+                <div class="sect-header fx-row fx-middle">
+                    <h2 class="sect-title icon-l icon-red">
+                        Пятница
+                    </h2>
+                </div>
+                <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+                    {custom  xfields="day_week|Пятница"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+                </div>
+            </div>
+
+
+            <div class="sect sect-calendar">
+                <div class="sect-header fx-row fx-middle">
+                    <h2 class="sect-title icon-l icon-red">
+                        Суббота
+                    </h2>
+                </div>
+                <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+                    {custom  xfields="day_week|Суббота"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+                </div>
+            </div>
+
+            <div class="sect sect-calendar">
+                <div class="sect-header fx-row fx-middle">
+                    <h2 class="sect-title icon-l icon-red">
+                        Воскресенье
+                    </h2>
+                </div>
+                <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+                    {custom  xfields="day_week|Воскресенье"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+                </div>
+            </div>
+            <?php endif;?>
+
+
+
+
             [not-aviable=main|cat]
             <div id="dle-content">{content}</div>
             [/not-aviable]

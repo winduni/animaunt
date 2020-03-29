@@ -4308,3 +4308,6 @@ span.ui-link{
 .ac-submit  button:hover{
     background: #56379f;
 }
+.sect-calendar .sect-title{
+    margin-bottom: -30px;
+}
