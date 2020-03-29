@@ -278,7 +278,8 @@ height:17px;display:block;text-indent:-9000px;z-index:1}
      border: 0px solid #e3e3e3 !important;
      box-shadow: none !important;
 }
-.bb-btn:hover{background-color:#e6e6e6;background:linear-gradient(to bottom, #fdfdfd 0%, #e6e6e6 100%)}
+.bb-btn:hover{background-color:#e6e6e6;background:linear-gradient(to bottom, #fdfdfd 0%, #e6e6e6 100%);
+    color: #000;}
 .bb-btn:active{background:#f3f3f3;border-color:#cfcfcf;box-shadow:0 0 5px #f3f3f3 inset}
 
 @font-face {

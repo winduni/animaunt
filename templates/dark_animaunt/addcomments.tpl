@@ -1,5 +1,7 @@
 <!--noindex-->
 <div class="add-comm-form clearfix add-shadow2" id="add-comm-form">
+	<div class="ac-av img-box" id="ac-av"></div><div align="right"><a href="/index.php?do=addnews" target="_blank"><span class="fa fa-pencil"></span><b>    Написать статью/рецензию</b></a></div>
+
 	<div class="ac-title">Прокомментировать <span class="fa fa-chevron-down"></span></div>     
 	
 		[not-logged]
@@ -21,7 +23,7 @@
 			
 [not-group=1]
 			<div class="ac-protect">
-				[question]
+			[question]
 				<div class="form-item clearfix imp">
 					<label>Вопрос:</label>
 					<div class="form-secur"><div style="margin-bottom:10px;">{question}</div>
@@ -49,7 +51,6 @@
 [/not-group]
 
 	<div class="ac-submit clearfix">
-		<div class="ac-av img-box" id="ac-av"></div><div align="right"><a href="/index.php?do=addnews" target="_blank"><span class="fa fa-pencil"></span><b>    Написать статью/рецензию</b></a></div>
 		<button name="submit" type="submit">Отправить</button>
 	</div>
 	

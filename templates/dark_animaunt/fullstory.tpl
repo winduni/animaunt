@@ -11,7 +11,12 @@
 $str = preg_replace("/[^0-9]/", ',', $timer);
 ?>
 
+
+
+
         <div class="fleft">
+
+
             <div class="fposter img-wide">
                 <img src="[xfvalue_image_url_poster]" alt="{title}"/>
                 <div class="th-qual">[xfvalue_age_limit]+</div>
@@ -103,6 +108,8 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
     [/desktop]
 
     <div class="sect">
+
+
         <center>
             {banner_pleer_after}
         </center>
@@ -214,9 +221,9 @@ $str = preg_replace("/[^0-9]/", ',', $timer);
                  data-counter=""></div>
         </div>
         <div>
-            <a href="https://tele.gg/Animaunttv" target="_blank" title="Скачать и смотреть {title} в Telegram с 2020 года">
+            <!--a href="https://tele.gg/Animaunttv" target="_blank" title="Скачать и смотреть {title} в Telegram с 2020 года">
                 <i class="fa fa-telegram" style="font-size: 25px;color: #e31522;"></i>
-            </a>
+            </a-->
 
             <a href="https://tele.gg/Animaunt_relis" target="_blank" title="Скачать и смотреть {title} в Telegram архив до 2020 года">
                 <i class="fa fa-telegram" style="font-size: 25px;color: #e31522;"></i>

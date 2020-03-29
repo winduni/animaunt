@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/v4-shims.css">
-    <link href="{THEME}/style/styles.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
-    <link href="{THEME}/style/menu.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
-    <link href="{THEME}/style/engine.css?v=<?php echo time() ?>" type="text/css" rel="stylesheet"/>
-
+    <link href="{THEME}/style/styles.css?v=1" type="text/css" rel="stylesheet"/>
+    <link href="{THEME}/style/menu.css?v=1" type="text/css" rel="stylesheet"/>
+    <link href="{THEME}/style/engine.css?v=1" type="text/css" rel="stylesheet"/>
+    <link href="{THEME}/style/btn-pleer.css?v=1" type="text/css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
     <link rel="icon" href="{THEME}/images/favicon.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -73,13 +73,14 @@
         <div class="header-in center clearfix">
             <a href="/" class="logo"></a>
             {include file="main-menu.tpl"}
-            <div class="btn-menu"><span class="fa fa-bars"></span></div>
+
             [group=5]
             <div class="btn-login center button js-login icon-l"><span class="fa fa-lock"></span>Войти</div>
             [/group]
             [not-group=5]
             <div class="btn-login center button js-login icon-l"><span class="fa fa-user"></span>Профиль</div>
             [/not-group]
+            <div class="btn-menu"><span class="fa fa-bars"></span></div>
         </div>
     </header>
 
@@ -91,24 +92,30 @@
 
     <div class="side-bc owl-carousel" id="owl-side-main">
         <div class="thumb-item">
-            <a class="thumb-img" href="/245-boruto-novye-pokoleniya-1.html">
-                <img src="{THEME}/images/slider_new/1.jpg" alt="">
-            </a>
+               <div class="bg-slide-main" style="background: url('{THEME}/images/slider_new/1.jpg');">
+                <a class="center button btn-slide-main"  href="/2050-bashnya-boga-2020.html">Подробнее</a>
+               </div>
+
         </div>
         <div class="thumb-item">
-            <a class="thumb-img"  href="/1939-pridi-zhe-v-mir-demonov-iruma.html">
-                <img src="{THEME}/images/slider_new/2.jpg" alt="">
-            </a>
+            <div class="bg-slide-main" style="background: url('{THEME}/images/slider_new/2.jpg');">
+                <a style="left: 20.6%;" class="center button btn-slide-main"  href="/2039-gleypnir.html">Подробнее</a>
+            </div>
         </div>
         <div class="thumb-item">
-            <a class="thumb-img"  href="/2023-dorohedoro.html">
-                <img src="{THEME}/images/slider_new/3.jpg" alt="">
-            </a>
+            <div class="bg-slide-main" style="background: url('{THEME}/images/slider_new/3.jpg');">
+                <a class="center button btn-slide-main"  href="/1727-gospozha-kaguya-v-lyubvi-kak-na-voyne123456123.html">Подробнее</a>
+            </div>
+       </div>
+        <div class="thumb-item">
+            <div class="bg-slide-main" style="background: url('{THEME}/images/slider_new/4.jpg');">
+                <a style="left: 22%;" class="center button btn-slide-main"  href="/129-mastera-mecha-onlayn.html">Подробнее</a>
+            </div>
         </div>
         <div class="thumb-item">
-            <a class="thumb-img" href="/1827-chernii-clever.html">
-                <img src="{THEME}/images/slider_new/4.jpg" alt="">
-            </a>
+            <div class="bg-slide-main" style="background: url('{THEME}/images/slider_new/4-4.jpg');">
+                <a style="left: 22%;" class="center button btn-slide-main"  href="/432-chernyy-klever-black-clover.html">Подробнее</a>
+            </div>
         </div>
     </div>
 
@@ -127,7 +134,7 @@
         {banner_main}
 
     </div>
-    <div class="cols fx-row center">
+    <div class="cols fx-row center first-row">
 
         <main class="main">
             {info}
@@ -154,17 +161,16 @@
             {include file="main-filter.tpl"}
             [/aviable]
 
-            <br>
+
             [aviable=main]
             <div id="dle-content">
                 {include file="main-page.tpl"}
             </div>
             [/aviable]
             [aviable=cat]
-            <br>
             <div class="sect">
                 <div class="sect-header fx-row fx-middle">
-                    <h2 class="sect-title icon-l icon-red">
+                    <h2 class="sect-title icon-l icon-red" style="margin-top: -15px;margin-bottom: -23px;">
                         <span class="fa fa-star"></span>
                         {category-title}
                     </h2>
@@ -184,8 +190,6 @@
 
         <aside class="side">
 
-
-            <br>
 
 
             [aviable=main]
@@ -233,7 +237,7 @@
 
                     <div class="side-bt icon-l icon-yellow"><span class="sa sa-eye"></span>Советуем глянуть</div>
                     <div class="side-bc owl-carousel" id="owl-side">
-                        {custom category="1-93" order="rand" sort="desc" days="100" template="custom-thumb-nodesc" from="0" limit="5" cache="no"}
+                        {custom category="1-93"  xfields="ongoing|1" order="rand" sort="desc" days="100" template="custom-thumb-nodesc" from="0" limit="5" cache="no"}
                     </div>
                 </div>
 
@@ -290,7 +294,8 @@
         <ul class="ft-menu">
 
             <li><b><a href="/index.php?do=feedback" title="Контакты" rel="nofollow">Связаться с нами<br>
-                        <h2><i class="far fa-envelope"></i></h2></br></a></b></li>
+                        <h2 style="font-size: 44px;
+    text-align: center;"><i class="far fa-envelope"></i></h2></br></a></b></li>
 
         </ul>
         <div class="ft-feed-soc">
@@ -299,7 +304,7 @@
                 <a href="https://vk.com/animaunt"><i class="fa fa-vk"></i></a>
                 <a href="https://tele.gg/Animaunttv"><i class="fa fa-telegram"></i></a>
                 <a href="https://www.youtube.com/channel/UCDbg3A2fyJy4EzJ_34jpZ8A/videos"><i class="fa fa-youtube"></i></a>
-                <a href=" https://www.instagram.com/animaunt/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.instagram.com/animaunt/"><i class="fa fa-instagram"></i></a>
             </div>
         </div>
         <div class="ft-btm fx-row fx-middle">

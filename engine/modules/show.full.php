@@ -1978,7 +1978,7 @@ $tpl->set( "{video}", json_encode($new_player_js) );
 							$first_series_block = $ser_code;
 						}
 
-						$series_blocks[] = "<div class=\"extra-series-item\" data-id=\"{$fp_id}\" data-iframe=\"{$ser_code}\">{$ser_name}</div>";
+						$series_blocks[] = "<div  data-type=\"pos_aware\" class=\"extra-series-item\" data-id=\"{$fp_id}\" data-iframe=\"{$ser_code}\">{$ser_name}</div>";
 					}
 
 					$series_blocks_str = implode("", $series_blocks);

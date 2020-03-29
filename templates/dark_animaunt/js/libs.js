@@ -308,10 +308,10 @@ $(document).ready(function(){
 		$('body').removeClass('opened-menu');
 	}); 
 	
-	$('body').on('click','.ft-soc .fa',function(){
+	/*$('body').on('click','.ft-soc .fa',function(){
 		var $url = $(this).attr("data-href");
 		window.open($url);
-	});
+	});*/
 	
 	$('body').on('click','.to-trailer',function(e){
 		e.preventDefault();

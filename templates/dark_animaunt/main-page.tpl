@@ -26,14 +26,14 @@
             <span class="fa fa-angle-double-right"></span>
         </a>
     </div>
-    <div class="sect-slide-items owl-carousel clearfix">
-        {custom  xfields="all_anime|1"   template="custom-short" from="0" limit="10" order="editdate" sort="desc" cache="no"}
+    <div class="sect-slide-items owl-carousel clearfix" style="margin-top: -25px;">
+        {custom  xfields="all_anime|1"   template="custom-slider" from="0" limit="10" order="editdate" sort="desc" cache="no"}
     </div>
 </div>
 
 
 
-<div class="sect">
+<div class="sect" style="margin-bottom: -30px;">
     <div class="sect-header fx-row fx-middle">
         <h2 class="sect-title icon-l icon-red">
             <span class="sa sa-newspaper-o"></span>

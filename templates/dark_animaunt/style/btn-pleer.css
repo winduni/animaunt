@@ -1,0 +1,45 @@
+.extra-series-item {
+    color: #000 !important;
+    line-height: 80px;
+    z-index: 1;
+    position: relative;
+    -webkit-transition: 1s ease-out;
+    transition: 1s ease-out;
+    overflow: hidden;
+}
+
+/*-------------- hover types --------------*/
+[data-type]:before {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    z-index: -1;
+}
+[data-type]:hover {
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    color: #fff !important;
+    z-index: 8;
+}
+
+
+/*--------position aware -----------*/
+[data-type="pos_aware"]:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #e31522;
+    border-radius: 50px;
+}
+[data-type="pos_aware"]:hover:before {
+    -webkit-transform: scale(8.3);
+    transform: scale(8.3);
+}

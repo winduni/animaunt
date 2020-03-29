@@ -8,7 +8,7 @@ $(function() {
         slideNum = 1,                                       // Номер текущего слайда
         index =0,
         clickBullets=0,
-        sliderInterval = 10000,                              // Интервал смены слайдов
+        sliderInterval = 1000,                              // Интервал смены слайдов
         animateTime = 1000,                                 // Время смены слайдов
         course = 1,                                         // Направление движения слайдера (1 или -1)
         margin = - slideWidth;                              // Первоначальное смещение слайдов
