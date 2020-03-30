@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 				// Если у элемента есть title - прибавляем к нему двоеточие и пробел
 				if (timerDescription != false) {
 					timerDescription = timerDescription+': ';
-				};
+				}; 
 
 				// получили строку, разбили ее по ","
 				var dateArr = $this.data("timer").split(",");
