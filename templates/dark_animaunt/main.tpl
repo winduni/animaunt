@@ -114,7 +114,7 @@
         </div>
         <div class="thumb-item">
             <div class="bg-slide-main" style="background: url('{THEME}/images/slider_new/4-4.jpg');">
-                <a style="left: 22%;" class="center button btn-slide-main"  href="/432-chernyy-klever-black-clover.html">Подробнее</a>
+                <a style="left: 22%;" class="center button btn-slide-main"  href="/1827-chernii-clever.html">Подробнее</a>
             </div>
         </div>
     </div>
