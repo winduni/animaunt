@@ -14,8 +14,7 @@
 		<label>Выберите кому:</label>
 		<div class="form-secur">
 			<select name="recip">
-				<option value="94" selected>Shachiburi (Админ)</option>
-				<option value="166">leoneo (Админ)</option>
+				<option value="26529" selected>MikhailKehl (Разработчик)</option>
 			</select>
 		</div>
 	</div>

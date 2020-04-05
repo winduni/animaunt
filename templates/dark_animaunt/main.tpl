@@ -335,7 +335,7 @@
                 [/desktop]
                 <div class="side-box">
                     <div class="side-bc">
-                        <a href="/calendar.html"> <img src="{THEME}/images/week/tyan-ponedelnik.gif"
+                        <a href="/calendar.html"> <img src="{THEME}/images/week/Raspisanie-tyan1213.gif"
                                                        style="max-width:100%;"></a>
                     </div>
                 </div>
